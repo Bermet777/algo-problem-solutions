@@ -1,10 +1,11 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        # sa = list(s) # Version 1 (inefficient)
+# Version 1 (inefficient)
+        # sa = list(s) 
         # ta = list(t)
         # return sorted(sa) == sorted(ta)
-
-        count = [0] * 26 # Version 2 (efficient)
+# Version 2 (efficient)
+        count = [0] * 26 
         for i in s:
             count[ord(i) - ord('a')] += 1
         for i in t:
